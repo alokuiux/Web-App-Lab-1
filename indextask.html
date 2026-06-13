@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Project Studio Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Project Prototype Hub</h1>
+        <p>Track Your Submissions Seamlessly</p>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Add New Project</h2>
+            <form id="projectForm" novalidate>
+                <div class="form-group" id="studentIdGroup">
+                    <label for="studentId">Student ID:</label>
+                    <input type="text" id="studentId" placeholder="e.g., STU-10293">
+                    <small class="error-msg" id="studentIdError"></small>
+                </div>
+
+                <div class="form-group" id="projectNameGroup">
+                    <label for="projectName">Project Title:</label>
+                    <input type="text" id="projectName" placeholder="e.g., AI-Powered SaaS Analytics">
+                    <small class="error-msg" id="nameError"></small>
+                </div>
+
+                <div class="form-group" id="projectTechGroup">
+                    <label for="projectTech">Core Technology:</label>
+                    <select id="projectTech">
+                        <option value="">-- Select Technology --</option>
+                        <option value="Vanilla JS">Vanilla JavaScript</option>
+                        <option value="React">React Node Ecosystem</option>
+                        <option value="NextJS">Next.js Framework</option>
+                        <option value="Vue.js">Vue.js Ecosystem</option>
+                        <option value="React Native">React Native (Mobile)</option>
+                        <option value="Flutter/Dart">Flutter & Dart Engine</option>
+                        <option value="Python/Django">Python & Django Suite</option>
+                        <option value="Java/Spring">Java Spring Boot</option>
+                        <option value="Go/Fiber">Go (Golang) Microservices</option>
+                        <option value="Rust">Rust Systems Architecture</option>
+                    </select>
+                    <small class="error-msg" id="techError"></small>
+                </div>
+
+                <button type="submit" id="submitBtn">Register Project</button>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h2>Submitted Prototypes</h2>
+            <div class="table-responsive">
+                <table id="projectTable">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Project Name</th>
+                            <th>Technology</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr>
+                            <td>STU-00000</td>
+                            <td>Example Seed Project</td>
+                            <td>Vanilla JS</td>
+                            <td><span class="status-badge">Active</span></td>
+                            <td><button class="delete-btn-example" disabled>System</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
